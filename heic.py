@@ -121,8 +121,7 @@ class HEICConverterApp:
                     self.output_dir, f"{base_filename}.{file_type}")
                 image.save(output_file, file_type.upper())
 
-                self.status_bar.configure(text=f"Converting file {i} of {
-                                          total_files}: {base_filename}.{file_type}")
+                self.status_bar.configure(text=f"Converting file {i} of {total_files}: {base_filename}.{file_type}")
                 self.root.update_idletasks()
             except Exception as e:
                 messagebox.showerror("Conversion Error",
